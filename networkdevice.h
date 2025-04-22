@@ -27,4 +27,4 @@ public:
     virtual void displayInfo() const;
 };
 
-#endif 
+#endif // NETWORKDEVICE_H

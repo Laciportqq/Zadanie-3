@@ -23,13 +23,12 @@ public:
     Menu(const std::string& filename) : db(filename) {}
     void run();
     
-
+    // Информация об авторе
     static void displayAuthorInfo() {
         std::cout << "\n=== Автор программы ===" << std::endl;
         std::cout << "Группа: ИЦТМС 2-2" << std::endl;
         std::cout << "ФИО: Аксенов Игорь Константинович" << std::endl;
-        std::cout << "Дата разработки: 21.04.2025" << std::endl;
     }
 };
 
-#endif 
+#endif // MENU_H

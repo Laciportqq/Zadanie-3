@@ -21,20 +21,23 @@ enum class ConnectionStandard {
     VDSL,
     DOCSIS,
     LTE,
-    WiFi
+    WiFi,
+    GPON
 };
 
 class Modem : public NetworkDevice {
-private:
+    private:
     ModemType type;
     ConnectionStandard standard;
     double maxSpeed;
+    double price;
     bool isConnected;
 
 public:
     Modem();
-    Modem(const std::string& manuf, const std::string& mdl, ModemType tp, 
-          ConnectionStandard std, double speed);
+    Modem(const std::string& manuf = "Unknown", const std::string& mdl = "Unknown",
+        ModemType tp = ModemType::DialUp, ConnectionStandard std = ConnectionStandard::V32,
+        double speed = 0.0, double prc = 0.0);
     ~Modem() override;
 
     void setType(ModemType tp);

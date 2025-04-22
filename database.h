@@ -17,4 +17,4 @@ public:
     void generateSampleData(DoublyLinkedList& list);
 };
 
-#endif 
+#endif // DATABASE_H

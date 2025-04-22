@@ -3,7 +3,7 @@
 #include <limits>
 
 void Menu::run() {
-
+    // Загрузка данных из файла или создание примеров
     if (!db.readFromFile(modemList)) {
         std::cout << "Создаем демонстрационные данные..." << std::endl;
         db.generateSampleData(modemList);
@@ -130,7 +130,7 @@ void Menu::editModem() {
     modem->displayInfo();
     
     std::cout << "\nВведите новые данные:" << std::endl;
-    addModem(); 
+    addModem(); // Используем ту же логику, что и для добавления
     
     std::cout << "Модем успешно обновлен!" << std::endl;
 }

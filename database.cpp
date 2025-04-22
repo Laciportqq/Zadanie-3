@@ -69,10 +69,10 @@ bool Database::writeToFile(const DoublyLinkedList& list) {
 }
 
 void Database::generateSampleData(DoublyLinkedList& list) {
-
+    // Добавляем 15 образцовых модемов
     list.addModem(Modem("Cisco", "DPC3008", ModemType::Cable, ConnectionStandard::DOCSIS, 340.0, 120.0));
     list.addModem(Modem("TP-Link", "Archer VR600", ModemType::DSL, ConnectionStandard::VDSL, 100.0, 80.0));
-    list.addModem(Modem("Huawei", "EchoLife HG8245H", ModemType::Fiber, ConnectionStandard::GPON, 1000.0, 150.0));
+    list.addModem(Modem("Huawei", "EchoLife HG8245H", ModemType::Fiber, ConnectionStandard::DOCSIS, 1000.0, 150.0));
     list.addModem(Modem("Zyxel", "VMG1312-B10B", ModemType::DSL, ConnectionStandard::ADSL, 24.0, 40.0));
     list.addModem(Modem("Netgear", "CM700", ModemType::Cable, ConnectionStandard::DOCSIS, 1400.0, 200.0));
     list.addModem(Modem("Asus", "DSL-AC68U", ModemType::DSL, ConnectionStandard::VDSL, 90.0, 70.0));
